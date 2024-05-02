@@ -8,9 +8,9 @@ console.log(num > anotherNum);
 console.log(num < anotherNum);
 console.log(num >= anotherNum);
 console.log(num <= anotherNum);
-console.log(num == "5");
+// console.log(num == "5");
 console.log(num != 8);
-console.log(num != "5");
+// console.log(num != "5");
 
 // Level 2-1
 let heightJohn:number = 170;
