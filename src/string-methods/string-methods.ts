@@ -100,3 +100,21 @@ let samsStatusTennis = samsStatus.replace("codingschool", "tennis");
 // document.querySelector(".bad").innerHTML = samsStatusBad;
 // document.querySelector(".school").innerHTML = samsStatusSchool;
 // document.querySelector(".tennis").innerHTML = samsStatusTennis;
+
+
+
+
+// Zum Abzählen kann man auch Startindexof nehmen!!!
+/*
+const quote = 'When I wrote this code, only God and I understood what I did. Now only God knows. – Anonymous';
+
+document.open();
+
+// Die Länge von quote ausgeben -> Alex
+document.write(`Die Länge ist: ${quote.length}<br>`);
+
+// Das Wort code ausschneiden --> Pius
+const startIndex = quote.indexOf('code');
+let code = quote.slice(startIndex, startIndex + 'code'.length);
+document.write(code);
+*/
