@@ -7,5 +7,8 @@ import './string-number-dom/string-number-dom'
 import './string-number-dom/dom'
 import './conditionals-math-date/math'
 import './conditionals-math-date/conditionals'
+import './conditionals-uebungen/conditionals-uebungen'
+import './date-uebungen/date'
+import './math-uebungen/math'
 
 // import garnicht nötig? Sonst lädt alles sofort in der Main Index.html
