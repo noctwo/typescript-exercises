@@ -66,7 +66,7 @@ function calculateMyAge(birthYear:number):number{
 };
 console.log(calculateMyAge(1924));
 
-function calcAgeDifference(birthYearOne, birthYearTwo){
+function calcAgeDifference(birthYearOne:number, birthYearTwo:number):number{
     let ageDifference = birthYearOne - birthYearTwo;
     return ageDifference;
 };
