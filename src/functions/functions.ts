@@ -77,3 +77,67 @@ function getOnlineMessage(isOnline: boolean):string {
 //Scope
 // aus jedem inneren Scope kann ich Variablen in allen ihn umschließenden Scopes sehen.
 // Globale Variablen können also abgerufen werden, global kann ich jedoch nicht auf Variablen in den inneren Scopes zugreifen!
+
+let pi = Math.PI;
+
+function calculateTax(percentage:number, isMarried:boolean):void {
+    let myTax = 2000;
+    if (isMarried) {
+        let resultMarried = percentage * 50 + myTax;
+        console.log(resultMarried);
+    } else {
+        let resultUnMarried = percentage * 80 + myTax;
+        console.log(resultUnMarried);
+    }
+};
+
+// pi ist von überall aus erreichbar
+
+// console.log(myTax); 
+//wird nicht gefunden, nur innerhalb der Funktion erreichbar
+
+// im else Scope kann ich nicht auf Variablen aus dem IF Scope zugreifen! - Es sind eigene Blöcke die nebeneinander existieren. IF und ELSE sind für sich geschlossene "Boxen".
+
+// um etwas doch in beiden blöcken zu verwenden muss es dann eben eine Ebene höher deklariert werden.
+
+
+
+// Event Listener
+let counterElement = document.getElementById("counter");
+let counter = 0;
+
+
+if (counterElement){
+    let buttonElement = document.getElementById("button-counter");
+    if (buttonElement){
+        buttonElement.addEventListener("click", (event) => {
+            event.preventDefault();
+            counter++;
+            counterElement.textContent = counter.toString();
+        });
+    }
+    }
+
+   // event.preventDefault verhindert das bereits per default vorgegebene Verhalten und implemenitert das nachfolgende. hier wird bsp-weise das Neuladen der Seite verhindert.
+
+   // statt arrow function
+/*
+if (counterElement){
+    function handleCountButtonClicked(event: MouseEvent):void{
+        event.preventDefault();
+        counter++;
+        if(counterElement){
+            counterElement.textContent = counter.toString();
+        }
+    }
+
+
+let buttonElement = document.getElementById("button-counter");
+    if (buttonElement){
+        buttonElement.addEventListener("click", handleCountButtonClicked);
+    }
+}
+
+*/
+
+// funktion wird hier ohne nachfolgende Klammern hinzugefügt und somit nur verknüpft
