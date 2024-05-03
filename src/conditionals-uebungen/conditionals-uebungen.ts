@@ -68,7 +68,7 @@ switch (true) {
 
 let weekDayAsNumber:number = Number(window.prompt("Please insert Number between 1 and 7"));
 let weekDayAsString 
-
+// statt true kann man hier weekDayAsNumber nehmen und dann nur noch die cases durchnummerieren
 switch (true) {
     case weekDayAsNumber === 1:
         weekDayAsString = "Monday";

@@ -10,5 +10,6 @@ import './conditionals-math-date/conditionals'
 import './conditionals-uebungen/conditionals-uebungen'
 import './date-uebungen/date'
 import './math-uebungen/math'
+import './functions/functions'
 
 // import garnicht nötig? Sonst lädt alles sofort in der Main Index.html
