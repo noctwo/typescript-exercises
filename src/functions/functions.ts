@@ -141,3 +141,30 @@ let buttonElement = document.getElementById("button-counter");
 */
 
 // funktion wird hier ohne nachfolgende Klammern hinzugefügt und somit nur verknüpft
+
+
+console.log("-".repeat(100));
+console.log("*".repeat(100));
+console.log("hallo@gmail.com");
+console.log("_".repeat(100));
+
+console.log("-".repeat(100));
+console.log("*".repeat(100));
+console.log("ciao@gmail.com");
+console.log("_".repeat(100));
+
+console.log("-".repeat(100));
+console.log("*".repeat(100));
+console.log("bye@gmail.com");
+console.log("_".repeat(100));
+
+function printEmail(mailAdress:string, repeatNumber:number):void{
+    console.log("-".repeat(repeatNumber));
+    console.log("*".repeat(repeatNumber));
+    console.log(mailAdress);
+    console.log("_".repeat(repeatNumber));
+};
+
+printEmail("Tony@gmail.com", 100);
+printEmail("Suzi@gmail.com", 80);
+printEmail("Manni@gmail.com", 60);
