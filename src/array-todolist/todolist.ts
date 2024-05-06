@@ -58,11 +58,16 @@ function askForUserInput(){
     let userInputTasks = window.prompt("Bitte gib 5 Tasks durch Komma getrennt ein.");
     let userInputSingleTask = userInputTasks.split(",");
     console.log(userInputSingleTask);
+    /*
     toDoItems.push(userInputSingleTask[0]);
     toDoItems.push(userInputSingleTask[1]);
     toDoItems.push(userInputSingleTask[2]);
     toDoItems.push(userInputSingleTask[3]);
     toDoItems.push(userInputSingleTask[4]);
+    */
+    for (let i = 0; i < userInputSingleTask.length; i++) {
+        toDoItems.push(userInputSingleTask[i].trim());
+    }
 };
 
 askForUserInput();

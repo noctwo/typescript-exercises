@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --stop-rotate: rotate(0deg);
+}
+
+body{
+    background-color: #393939;
+    color: #fff;
+}
+
+.wheel{
+    width: 750px;
+    height: 750px;
+    background-image: url(https://source.unsplash.com/p203ekCK4Ac);
+    background-size: cover;
+    border-radius: 100%;
+    margin: 0 auto;
+    transform: var(--stop-rotate);
+}
+
+.spin-wheel{
+    -webkit-animation:spin 3s linear infinite;
+    -moz-animation:spin 3s linear infinite;
+    animation:spin 3s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+.name-on-wheel{
+    display: flex;
+}
