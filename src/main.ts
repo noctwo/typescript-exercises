@@ -14,5 +14,6 @@ import './functions/functions'
 import './functions-uebungen/functions-uebungen'
 import './arrays/arrays'
 import './arrys-uebungen/arrays-uebungen'
+import './array-todolist/todolist'
 
 // import garnicht nötig? Sonst lädt alles sofort in der Main Index.html
