@@ -16,5 +16,6 @@ import './arrays/arrays'
 import './arrys-uebungen/arrays-uebungen'
 import './array-todolist/todolist'
 import './wheelofnames/wheelofnames'
+import './array-uebungen-II/array-uebungen-II'
 
 // import garnicht nötig? Sonst lädt alles sofort in der Main Index.html
