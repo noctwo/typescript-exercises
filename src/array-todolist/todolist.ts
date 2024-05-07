@@ -75,3 +75,31 @@ printPretty();
 
 
 /* eins, zwei, drei, vier, fünf */
+
+//Fehler abfangen
+
+/*
+let toDoItems = ['Putzen', 'Einkaufen'];
+
+function askForUserInput() {
+  let userInputTasks = window.prompt('Bitte gib 5 Tasks durch Komma getrennt ein.');
+  if (!userInputTasks) {
+    console.log('Du hast keine Tasks eingegeben.');
+    return;
+  }
+  let userInputSingleTask = userInputTasks.split(',');
+  if (userInputSingleTask.length !== 5) {
+    console.log('Bitte gib 5 Tasks an.');
+    return;
+  }
+  console.log(userInputSingleTask);
+  toDoItems.push(userInputSingleTask[0]);
+  toDoItems.push(userInputSingleTask[1]);
+  toDoItems.push(userInputSingleTask[2]);
+  toDoItems.push(userInputSingleTask[3]);
+  toDoItems.push(userInputSingleTask[4]);
+}
+
+askForUserInput();
+
+*/
