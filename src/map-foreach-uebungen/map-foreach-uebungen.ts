@@ -62,6 +62,7 @@ let filteredEvenNumbers = zahlen.filter((zahl:number) => {
 });
 console.log(filteredEvenNumbers);
 
+
 let filteredOddNumbers = zahlen.filter((zahl:number) => {
     if (zahl % 2 !== 0) {
         return zahl;
