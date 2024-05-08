@@ -17,5 +17,8 @@ import './arrys-uebungen/arrays-uebungen'
 import './array-todolist/todolist'
 import './wheelofnames/wheelofnames'
 import './array-uebungen-II/array-uebungen-II'
+import './array-search/array-serach'
+import './map-foreach/map-foreach'
+import './map-foreach-uebungen/map-foreach-uebungen'
 
 // import garnicht nötig? Sonst lädt alles sofort in der Main Index.html

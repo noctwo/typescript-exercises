@@ -186,3 +186,18 @@ console.log(colors.sort(sortByLength));
 // mit callback function - arrow function
 
 colors.sort((a:string, b:string) => {return a.localeCompare(b)});
+
+//two dimensional Arrays
+const shoppingListWeek: string [][] = [
+    ["Water", "Beer", "Toilet Paper"], 
+    ["Cauliflower", "Coconut", "Lemins"],
+    ["Tea", "Coffee", "Chips"]
+]
+
+console.log(shoppingListWeek);
+
+const beer = shoppingListWeek [0][1];
+console.log(beer);
+
+const chips = shoppingListWeek [2][2];
+console.log(chips);
