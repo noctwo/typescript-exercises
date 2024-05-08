@@ -152,16 +152,16 @@ console.log(newPrices.sort());
 
 // sort aufsteigend absteigend
 
-function sortAscending(a:number, b:number){
+function sortAscendingOne(a:number, b:number){
     return a - b;
 }
 
-function sortDescending(a:number, b:number){
+function sortDescendingOne(a:number, b:number){
     return b - a;
 }
 
-console.log(newPrices.sort(sortAscending));
-console.log(newPrices.sort(sortDescending));
+console.log(newPrices.sort(sortAscendingOne));
+console.log(newPrices.sort(sortDescendingOne));
 
 function sortAscendingString (a:string, b:string){
     return a.localeCompare(b);
