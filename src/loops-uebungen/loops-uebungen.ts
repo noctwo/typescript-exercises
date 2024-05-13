@@ -49,6 +49,7 @@ do {
 
 
 // Level 2-1
+
 function createImageNames(){
     let returnArray = [];
     let fileCount = 0;

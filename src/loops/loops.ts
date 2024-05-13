@@ -105,3 +105,42 @@ for (const meal of meals) {
 meals.forEach((meal: string ) => {
     console.log(meal);
 })
+
+
+// break
+
+for (let index = 0; index < 10; index++) {
+    console.log(index);
+    if (index === 8){
+        break; // hört bei auf zu zählen
+    }
+}
+
+// gibt da erste ergebins das durch 7 teilbar ist zurück und hört dann auf.  --- weil braucht man ja nicht mehr wenn das erste Result gefunden ist.
+function divideblayBySeven (startNumber: number, endNumber: number){
+    let result = 0;
+    for (let index = startNumber; index <= endNumber; index++) {
+        if(index % 7 === 0){
+            result = index;
+            break;
+        }
+        
+    }
+    return result;
+}
+const result1 = divideblayBySeven(15, 23);
+console.log(result1);
+
+
+// continue
+for (let index = 0; index < 10; index++) {
+    if (index % 2 === 0) {
+        continue; // wenn bedingung zutrifft, dann hier denn aktuellen Schleifendurchlauf abbrechen
+    }
+    console.log(index);
+    let summm = 1233435;
+    console.log(summm);
+}
+
+
+// break bricht die ganze Schleiefe ab (und was danach kommt ?), continue den Durchlauf (und das was danach kommt läuft weiter?)!
