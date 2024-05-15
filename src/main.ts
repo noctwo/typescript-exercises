@@ -23,5 +23,6 @@ import './map-foreach-uebungen/map-foreach-uebungen'
 import './loops/loops'
 import './loops-uebungen/loops-uebungen'
 import './loops-uebungen-II/loops-uebungen-II'
+import './objects/objects'
 
 // import garnicht nötig? Sonst lädt alles sofort in der Main Index.html
