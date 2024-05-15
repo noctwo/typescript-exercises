@@ -188,3 +188,98 @@ console.log(aphabeticalSort.sort((a:any, b:any) => {
 
 console.log(aphabeticalSort.sort((a:any, b:any) => {
     return a.period_active.start - (b.period_active.start)}));
+
+
+//* Level BONUS 2-5
+type PeriodActiveTwo = {
+    start: number;
+    end: number | string;
+    extra?: number;
+};
+
+type SingerTwo = {
+    name: string;
+    country: string;
+    period_active: PeriodActiveTwo;
+    genre: string;
+};
+
+const singersTwo: SingerTwo[] = [
+    { 
+    name: 'The Beatles', 
+    country: 'United Kingdom', 
+    period_active: { start: 1960, end: 1970 }, 
+    genre: 'Rock / Pop' 
+    },
+    {
+    name: 'Elvis Presley',
+    country: 'United States',
+    period_active: { start: 1954, end: 1977 },
+    genre: 'Rock and roll'
+    },
+    {
+    name: 'Michael Jackson',
+    country: 'United States',
+    period_active: { start: 1964, end: 2009 },
+    genre: 'Pop / Rock / Dance / Soul / R&B'
+    },
+    {
+    name: 'Elton John',
+    country: 'United Kingdom',
+    period_active: { start: 1964, end: 'present' },
+    genre: 'Pop / Rock'
+    },
+    {
+    name: 'Madonna',
+    country: 'United States',
+    period_active: { start: 1979, end: 'present' },
+    genre: 'Pop / Dance / Electronica'
+    },
+    {
+    name: 'Led Zeppelin',
+    country: 'United Kingdom',
+    period_active: { start: 1968, end: 1980 },
+    genre: 'Hard rock / Blues rock / Folk rock'
+    },
+    {
+    name: 'Rihanna',
+    country: 'United States',
+    period_active: { start: 2005, end: 'present' },
+    genre: 'R&B / Pop / Dance / Hip-hop'
+    },
+    {
+    name: 'Pink Floyd',
+    country: 'United Kingdom',
+    period_active: { start: 1965, end: 1996, extra: 2014 },
+    genre: 'Progressive rock / Psychedelic rock'
+    }
+];
+
+let searchButton = document.getElementById("search-button");
+searchButton?.addEventListener("click",searchSingersTwo);
+
+let searchInput:any = document.getElementById("searchInput");
+
+let outputTable = document.getElementById("table-container");
+
+function createTable(resultFromSearch:any){
+    let table:any = outputTable?.appendChild(document.createElement("div"));
+
+    let singerName = table.appendChild(document.createElement("h3"));
+    let singerCountry = table.appendChild(document.createElement("p"));
+    let singerActive = table.appendChild(document.createElement("p"));
+    let singerGenre = table.appendChild(document.createElement("p"));
+
+    //? singerName.innerHTML = singersTwo[].name
+    
+};
+
+function searchSingersTwo(){
+    let searchTerm = searchInput?.value.toLocaleLowerCase();
+    let searchResult = singersTwo.filter((singer) => singer.name.toLocaleLowerCase().includes(searchTerm));
+    createTable(searchResult);
+};
+
+//! singersTwo geht ins Array - erste Ebene
+//! (singer) sagt, dass ich die im Array befindlichen Dinge durchgehen will - zweite Ebene
+//! singer.name sagt, dass ich noch eine Ebene tiefer in die Dinge rein will - dritte Ebene
