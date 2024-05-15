@@ -25,5 +25,6 @@ import './loops-uebungen/loops-uebungen'
 import './loops-uebungen-II/loops-uebungen-II'
 import './objects/objects'
 import './objects/math'
+import './objects-uebungen/objects-uebungen'
 
 // import garnicht nötig? Sonst lädt alles sofort in der Main Index.html
