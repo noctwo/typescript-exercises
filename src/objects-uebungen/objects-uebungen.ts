@@ -271,6 +271,7 @@ function createTable(resultFromSearch:any){
     let singerGenre = table.appendChild(document.createElement("p"));
 
     //? singerName.innerHTML = singersTwo[].name
+    //! mit einem Loop komme ich hier direkt rein, wie unten!
     
 };
 
