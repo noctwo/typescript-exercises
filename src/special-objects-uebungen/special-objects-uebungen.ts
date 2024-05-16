@@ -131,7 +131,7 @@ console.log(allColors);
 
 allColors.forEach(color => {
     let button:any = document.createElement("button");
-    button.innerText = "Choose Color";
+    button.innerText = color;
     button.style.backgroundColor = "#" + color;
     document.body.appendChild(button)
 });
