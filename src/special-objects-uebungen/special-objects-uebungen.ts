@@ -73,27 +73,30 @@ enum PizzaIngedients{
     Broccoli
 }
 
-type PizzaTemplate = {size: PizzaSize, ingredients: PizzaIngedients};
+type PizzaTemplate = {size: PizzaSize, ingredients: PizzaIngedients[]};
 
 let pizzaOne:PizzaTemplate = {
     size: PizzaSize.Small,
-    ingredients: PizzaIngedients.Cheese
+    ingredients: [PizzaIngedients.Cheese, PizzaIngedients.Onion]
 }
 
 let pizzaTwo:PizzaTemplate = {
     size: PizzaSize.Medium,
-    ingredients: PizzaIngedients.Onion
+    ingredients: [PizzaIngedients.Onion, PizzaIngedients.Tofu]
 }
 
 let pizzaThree:PizzaTemplate = {
     size: PizzaSize.Large,
-    ingredients: PizzaIngedients.Tofu
+    ingredients: [PizzaIngedients.Tofu, PizzaIngedients.Broccoli]
 }
 
 let pizzaFour:PizzaTemplate = {
     size: PizzaSize.Family,
-    ingredients: PizzaIngedients.Broccoli
+    ingredients: [PizzaIngedients.Broccoli, PizzaIngedients.Cheese]
 }
+console.log("gibt die Size aus: ", PizzaSize[pizzaOne.size]);
+// um die Ecke weil es aus dem Enum nicht ausgegeben werden kann???
+
 
 //* Level 2-1
 enum ErrorCodes{
@@ -119,22 +122,31 @@ generateCodes();
 
 //* Level 2-2
 enum ClothingColor{
-    Gelb = "f5e642",
-    Orange = "f59b42",
-    Pink = "ef42f5",
-    Blau = "42aaf5",
-    Lila = "bf42f5",
-    Grau = "dbd9db",
+    Gelb = "#f5e642",
+    Orange = "#f59b42",
+    Pink = "#ef42f5",
+    Blau = "#42aaf5",
+    Lila = "#bf42f5",
+    Grau = "#dbd9db",
 };
-let allColors = [ClothingColor.Gelb, ClothingColor.Orange, ClothingColor.Pink, ClothingColor.Blau, ClothingColor.Lila, ClothingColor.Grau];
+let allColors: ClothingColor[] = [ClothingColor.Gelb, ClothingColor.Orange, ClothingColor.Pink, ClothingColor.Blau, ClothingColor.Lila, ClothingColor.Grau];
 console.log(allColors);
 
 allColors.forEach(color => {
     let button:any = document.createElement("button");
     button.innerText = color;
-    button.style.backgroundColor = "#" + color;
-    document.body.appendChild(button)
+    button.style.backgroundColor = color;
+    document.body.appendChild(button);
 });
+
+//? color name dynamisch anzeigen - über Object Key & Object Value
+//* jetzt könnten auch einfach oben colors hinzugefügt werden
+for (let index = 0; index < Object.keys(ClothingColor).length; index++) {
+    let button:any = document.createElement("button");
+    button.innerText = Object.keys(ClothingColor)[index];
+    button.style.backgroundColor = Object.values(ClothingColor)[index];
+    document.body.appendChild(button);    
+}
 
 //* Level 1-1
 const starWarsCharacters :string[] = ["Luke Skywalker", "Darth Vader", "Obi Wan Kenobi"]
@@ -156,3 +168,6 @@ console.log(favoriteBands);
 console.log(favoriteBands.get("Metallica"));
 console.log(favoriteBands.get("Metallica")[3]);
 
+
+// Enum um ein anderes Enum erweitern
+// type AllShapes = BasicShape | ExtendedShape;
