@@ -29,5 +29,6 @@ import './objects-uebungen/objects-uebungen'
 import './special-objects/special-objects'
 import './special-objects-uebungen/special-objects-uebungen'
 import './undefined-null-any/undefined-null-any'
-
+import './dom-II/dom-II'
+import './dom-II-Uebungen/dom-II-uebungen'
 // import garnicht nötig? Sonst lädt alles sofort in der Main Index.html

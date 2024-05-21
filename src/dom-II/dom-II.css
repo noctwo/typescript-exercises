@@ -1,0 +1,10 @@
+h1{
+    font-size: 3rem;
+}
+
+.fruit-item{
+    padding: 1em 2em;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
