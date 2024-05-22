@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dom-III-uebungen.css">
+    <title>Dom III Uebungen</title>
+</head>
+<body>
+    <br>
+    <hr>
+    <br>
+
+    <!-- Level 1-9 -->
+    <form>
+        <select id="farbeAuswahlen">
+          <option>Medium Orchid</option>
+          <option>Mint Cream</option>
+          <option>Dodger Blue</option>
+          <option>Goldenrod</option>
+          <option>Wheat</option>
+          <option>Medium Turquoise</option>
+          <option>Moccasin</option>
+          <option>Fire Brick</option>
+          <option>Lime Green</option>
+          <option>Slate Gray</option>
+        </select>
+        <button id="del-col-btn">Farbe von Liste Entfernen</button>
+    </form>
+    <br>
+    <hr>
+    <br>
+
+<!-- Level 2-2 -->
+<div>
+    <form id="form1">
+      <label for="vorname">Vorname</label
+      ><input type="text" id="vorname" name="vorname" placeholder="Dein Name..." /><label for="nachname"
+        >Last Name</label
+      ><input type="text" id="nachname" name="nachname" placeholder="Dein Nachname..." /><label for="land">Land</label
+      ><select id="land" name="land">
+        <option value="Australia">Australia</option>
+        <option value="Canada">Canada</option>
+        <option value="Usa">USA</option></select
+      ><input type="submit" value="Submit" />
+    </form>
+  </div>
+
+  <br>
+<hr>
+<br>
+<!-- Level 2-4 -->
+
+<form>
+    <select id="choose-color">
+      <option >Medium Orchid</option>
+      <option >Mint Cream</option>
+      <option >Dodger Blue</option>
+      <option >Goldenrod</option>
+      <option >Wheat</option>
+      <option >Medium Turquoise</option>
+      <option >Moccasin</option>
+      <option >Fire Brick</option>
+      <option >Lime Green</option>
+      <option >Slate Gray</option>
+    </select>
+    <button id="bg-color-change-btn">Change BG Color</button>
+</form>
+<br>
+<hr>
+<br>
+<!-- Level 2-10 -->
+<button id="small-btn">Small</button>
+<button id="medium-btn">Middle</button>
+<button id="big-btn">Big & Crazy</button>
+
+<div class="wrapper">
+  <div id="element" class="small">
+    <h1>Hallo classList!</h1>
+  </div>
+</div>
+
+<!-- Level 3-1 -->
+<section class="todo">
+    <h2>Meine Todos</h2>
+    <input id="new-to-do-input" type="text" placeholder="todo hinzu">
+    <input id="todo-submit" type="submit" calue="add">
+    <div id="my-todos"></div>
+</section>
+
+    <script type="module" src="dom-III-uebungen.ts"></script>
+</body>
+</html>
