@@ -39,6 +39,7 @@ const fruitListElementWithDiv = document.querySelector("div");
 
 //? holt sich alle Div Elemente auf die die Bedingung zutrifft
 const allDivElements = document.querySelectorAll("div");
+//? gibt dann aber eine Art Array aus. Um einzelne ELemente zu ändern -> forEach Loop!
 
 
 //* 3. Daten darstellen

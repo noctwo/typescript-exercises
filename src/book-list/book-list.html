@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="book-list.css">
+    <title>Book List</title>
+</head>
+<body>
+    <main>
+        <div id="app">
+            <form id="book-form">
+                <input id="title-input" type="text" placeholder="Add a title">
+                <input id="author-input" type="text" placeholder="Add Author Name">
+                <select id="genre-select">
+                    <option value="" disabled selected>Select Genre</option> <!-- Platzhalter -->
+                    <option value="Fiction">Fiction</option> 
+                    <option value="Non-Fiction">Non-Fiction</option> 
+                    <option value="Fantasy">Fantasy</option> 
+                    <option value="History">History</option> 
+                    <option value="Mystery">Mystery</option> 
+                    <option value="Crime">Crime</option> 
+                    <option value="Drama">Drama</option> 
+                    <option value="Thriller">Thriller</option> 
+                </select>
+                <input id="year-input" type="number" placeholder="Add Year">
+                <input id="pages-input" type="number" placeholder="Add number of Pages">
+                <div id="error-text"></div>
+                <button id="submit-button" type="submit">Add book</button>
+            </form>
+            <ul id="book-list"></ul>
+        </div>
+    </main>
+   <script type="module" src="book-list.ts"></script>
+</body>
+</html>
