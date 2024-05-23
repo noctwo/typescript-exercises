@@ -56,6 +56,8 @@ function changeBGColorOnClick(){
     docBody.style.backgroundColor = removeSpaces;
 };
 
+//! ohne regex -> .replace(" ", "");
+
 //* Level 2-10
 //fruitButtonToCreate.classList.add("fruit-item");
 let smallBtn = document.getElementById("small-btn");
