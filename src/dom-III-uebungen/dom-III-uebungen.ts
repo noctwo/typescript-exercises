@@ -93,7 +93,7 @@ function addClassBig(){
     removeClass()
     backgroundElement?.classList.toggle("small-three");
 };
-
+//! boolean bei toggle fehlt - dann brauchts auch kein .remove! dogh!
 
 //* Level 3-1
 let newToDoInput = document.getElementById("new-to-do-input") as HTMLInputElement;
