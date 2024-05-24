@@ -4,7 +4,7 @@ console.log('books.ts');
 type Book = { title: string; author: string; genre: string; year: number; pages: number };
 
 // * 2. Liste von Büchern anlegen
-const books: Book[] = [];
+let books: Book[] = [];
 
 // * 3. Alle nötigen HTML-Elemente rausholen
 // <ul id="book-list"></ul>
@@ -15,6 +15,30 @@ const authorInput = document.getElementById('author-input') as HTMLInputElement;
 const genreSelect = document.getElementById('genre-select') as HTMLSelectElement;
 const yearInput = document.getElementById('year-input') as HTMLInputElement;
 const pagesInput = document.getElementById('pages-input') as HTMLInputElement;
+
+//? load and save button
+const loadButton = document.getElementById("load-button");
+const saveButton = document.getElementById("save-button");
+
+
+//? zum umwandeln von array in string (es können nur strings im localstorage gespeichert werden -> json.stringify)
+saveButton?.addEventListener("click", () => {
+  localStorage.setItem("books", JSON.stringify(books));
+});
+
+//? beim rausholen braucht es nur den key ("books") unter dem es vorher abgelegt wurde
+//? im key steht jetzt ein string der wieder ein array werden muss -> JSON.parse
+loadButton?.addEventListener("click", () => {
+  const booksFromLocalStorage = localStorage.getItem("books");
+  books = JSON.parse(booksFromLocalStorage);
+  renderBooks();
+});
+
+function renderBooks():void{
+  books.forEach((book:Book) => {
+    addBookToOutput(book);
+  })
+}
 
 // ? Error und die Liste
 const bookErrorOutput = document.getElementById('error-text') as HTMLDivElement;
@@ -98,10 +122,15 @@ function addBookToOutput(newBook: Book) {
 
 function validateBook(book: Book): string {
   // ? sind alle Felder befüllt
+  //? oder HTML Felder auf "required" setzen
+  //? was im HTML geht - auch da machen - nur was nicht hier - einfacher
+  /*
   if (!book.title || !book.author || !book.genre || !book.year || !book.pages) {
     return 'All fields are required';
   }
-
+*/
+//? auch das lässt sich im HTML Feld mit min / max prüfen
+/*
   // ? liegt das Jahr zwischen 0 und 2024
   if (book.year < 0 || book.year > 2024) {
     return 'Year must be between 0 and 2024';
@@ -109,6 +138,11 @@ function validateBook(book: Book): string {
   // ? ist die Seitenzahl größer 0 und kleiner als 20000
   if (book.pages <= 0 || book.pages > 20000) {
     return 'Pages must be between 0 and 20000';
+  }
+  */
+
+  if(book.title.length < 2){
+    return "Title must have at least 2 letters";
   }
   return '';
 }

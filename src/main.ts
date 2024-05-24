@@ -34,4 +34,5 @@ import './dom-II-Uebungen/dom-II-uebungen'
 import './dom-III/dom-III'
 import './book-list/book-list'
 import './dom-III-uebungen/dom-III-uebungen'
+import './advanced-functions/advanced-functions'
 // import garnicht nötig? Sonst lädt alles sofort in der Main Index.html
