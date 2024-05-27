@@ -32,7 +32,7 @@ function addTwoHTML(a:number, b:number){
 addTwoHTML(2,1);
 
 let addTwoHTMLArrow = (a:number, b:number) => {
-    a + b
+    console.log(a + b);
 }
 
 addTwoHTMLArrow (2,3);
@@ -47,7 +47,7 @@ function alertMultiplyTwo(a:number, b:number){
 alertMultiplyTwo(2, 2);
 
 let alertMultiplyTwoArrow = (a:number, b:number) => {
-    a * b;
+   window.alert(a * b);
 }
 
 alertMultiplyTwoArrow(2,4);
@@ -60,7 +60,7 @@ let anObject = {
     contentThree: 3
 }
 
-function objectToConsole(myObject){
+function objectToConsole(myObject:Object){
     Object.keys(myObject).forEach(key => {
         console.log(key);
     });
@@ -68,7 +68,7 @@ function objectToConsole(myObject){
 
 objectToConsole(anObject);
 
-let objectToConsoleArrow = (myObject) => {
+let objectToConsoleArrow = (myObject:Object) => {
     Object.keys(myObject).forEach(key => {
         console.log(key);
     });

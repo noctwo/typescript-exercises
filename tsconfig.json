@@ -10,7 +10,8 @@
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    //? sollte false sein um typesd direkt exportieren zu können
+    "isolatedModules": false,
     "noEmit": true,
 
     /* Linting */
