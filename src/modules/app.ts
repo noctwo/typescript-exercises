@@ -43,3 +43,22 @@ console.log(Suppliers.totalNumber);
 console.log(Suppliers.showBestSupplier());
 
 console.log(Customers.totalNumber);
+
+
+//! RECAP
+
+// * Warum sollte ich Module nutzen?
+// ? um den Code zu strukturieren, Performace/Ladezeiten, weil ich nur das lade, was ich wirklich brauche
+// ? damit ich kleinere, übersichtlichere Dateien habe
+
+// * Wann sollte ich was exportieren?
+// ? wenn ich die Variablen, Funktion in einer andere Datei/Modul nutzen will - teilen will
+
+// * Welchen Hack kann ich nutzen, wenn ich nichts exportieren will, aber die Datei als Module behandeln will?
+export {};
+// ? damit wir diese Datei als Modul behandelt und ich bekomme den Fehler: doppelter Variablenname etc. nicht
+// ? in echten Projekten sollten wir das nicht machen, nur bei uns in unserem großen Projekt, in dem in den
+// ? Unterordern ganz viele unabhängige Themen liegen können wir das nutzen
+
+// * Wofür nutzt man Namespaces?
+// ? um nochmal Unterkategorien festzulegen, z. B. fachliche Gruppierung (Bestellungen, Kunden...)
