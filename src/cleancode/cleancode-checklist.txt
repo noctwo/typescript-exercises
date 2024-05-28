@@ -1,0 +1,42 @@
+Was kann ich in bestehendem Code überprüfen und bei meinem Code beachten?
+
+1. Variablennamen
+    - keine Namen, die aus einem Buchstaben bestehen, außer bei Mathe
+    - kein bla, blub, bullshit...
+    - camelCase
+    - sprechende, aussagekräftige Namen
+
+2. Funktionen
+    - Namen
+        - camelCase
+        - Verb-Objekt (+ Zusatz)
+        - sprechende, aussagekräftige Namen
+    - Parameter
+        - keine Typ-Definitionen (-> auslagern in einen Type)
+        - nicht mehr als 5 Parameter (-> Parameter-Objekt)
+    - nicht mehr als 50 - 100 Zeilen
+    - nur eine Funktionalität bzw. eine Aufgabe (wenn And im Namen ist -> Code Smell)
+    - kann man etwas in Unterfunktionen auslagern, die die Lesbarkeit erleichtern
+
+3. Console.logs
+    - alle unnötigen entfernen
+
+4. Kommentare
+    - wirklich nötig?
+    - aktuell
+
+5. DRY-Prinzip
+    - gibt es doppelten Code
+    - sind es mindestens 2 aufeinanderfolgende Zeilen
+    - in Funktion oder Loop auslagern
+        - Loop, wenn es nur an einer Stelle z.  B. auf Basis eines Arrays passiert
+        - Funktion, wenn es an verschiedenen Stellen zu verschiedenen Zeitpunkten benutzt wird
+
+6. KISS-Prinzip
+    - Verständlichkeit geht vor komplizierten Verschachtelungen
+    - nicht mehr als 3 Chaining-Aufrufe bzw. aneinandergereihte Funktionsaufrufe
+       (.map((m) => (m.toLowerCase().replace(' ', '').includes('mate') ? 'yes' : 'no')))
+
+7. YAGNI-Prinzip
+    - wurde nur das umgesetzt, was verlangt ist
+    - habe ich Sachen schon mal vorgesehen, die gar nicht benutzt werden -> direkt wieder löschen
