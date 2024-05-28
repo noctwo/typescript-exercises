@@ -37,4 +37,6 @@ import './dom-III-uebungen/dom-III-uebungen'
 import './advanced-functions/advanced-functions'
 import './advanced-functions-uebungen/advanced-functions-uebungen'
 import './modules/app'
+import './cleancode/cleancode'
+import './cleancode-uebungen/cleancode-uebungen'
 // import garnicht nötig? Sonst lädt alles sofort in der Main Index.html
