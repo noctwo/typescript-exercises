@@ -39,4 +39,6 @@ import './advanced-functions-uebungen/advanced-functions-uebungen'
 import './modules/app'
 import './cleancode/cleancode'
 import './cleancode-uebungen/cleancode-uebungen'
+import './oop-I/oop-I'
+import './oop-I-Uebungen/oop-I-uebungen'
 // import garnicht nötig? Sonst lädt alles sofort in der Main Index.html
