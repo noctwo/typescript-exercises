@@ -13,12 +13,12 @@ intro2();
 
 //* Level 1-2
 function helloHTML(){
-    document.body.innerHTML = "Hello";
+   // document.body.innerHTML = "Hello";
 }
 helloHTML();
 
 let helloHTMLArrow = () => {
-    document.body.innerHTML = "Hello";
+   // document.body.innerHTML = "Hello";
 }
 
 helloHTMLArrow();
@@ -143,3 +143,67 @@ console.log(createMonster("Pummel", "Ugglbuggl", 500));
 
 
 //* Level 2-2
+
+let customerfirstName = document.getElementById("first-name") as HTMLInputElement;
+
+let customerLastName = document.getElementById("last-name") as HTMLInputElement;
+
+let customerEmail = document.getElementById("email") as HTMLInputElement;
+
+let customerPhone = document.getElementById("phone") as HTMLInputElement;
+
+let greetingOutputArea = document.getElementById("greeting-output");
+
+let newCustomerSubmitBtn = document.getElementById("submit");
+
+type NewCustomCustomer = {
+    firstName: string;
+    lastName: string;
+    email?: string;
+    phone?: string;
+}
+
+newCustomerSubmitBtn?.addEventListener("click",(event) => {
+    event.preventDefault();
+
+    let newCustomer:NewCustomCustomer = {
+        firstName: customerfirstName.value,
+        lastName: customerLastName.value,
+        email: customerEmail.value,
+        phone: customerPhone.value
+    }
+
+    let customerFirstNameInput = customerfirstName.value;
+    let customerLastNameInput = customerLastName.value;
+    let customerEmailInput = customerEmail.value;
+    let customerPhoneInput = customerPhone.value;
+
+    greetNewUser1(newCustomer);
+
+    greetUser2(customerFirstNameInput, customerLastNameInput, customerEmailInput, customerPhoneInput);
+});
+
+function greetNewUser1(newCustomer: NewCustomCustomer) {
+    if (newCustomer.email !== "" && newCustomer.phone !== "") {
+        console.log(`Hello ${newCustomer.firstName} ${newCustomer.lastName}. We will contact you via ${newCustomer.email} and ${newCustomer.phone}.`);
+    } else if (newCustomer.email !== "") {
+        console.log(`Hello ${newCustomer.firstName} ${newCustomer.lastName}. We will contact you via ${newCustomer.email}.`);
+    } else if (newCustomer.phone !== "") {
+        console.log(`Hello ${newCustomer.firstName} ${newCustomer.lastName}. We will contact you via ${newCustomer.phone}.`);
+    } else {
+        console.log(`Hello ${newCustomer.firstName} ${newCustomer.lastName}.`);
+    }
+};
+
+function greetUser2(customerFirstNameInput:string, customerLastNameInput:string, customerEmailInput?:string, customerPhoneInput?:string){
+    if (customerEmailInput && customerPhoneInput){
+        console.log(customerFirstNameInput, customerLastNameInput, customerEmailInput, customerPhoneInput);
+    } else if (customerEmailInput){
+        console.log(customerFirstNameInput, customerLastNameInput, customerEmailInput);
+    } else if (customerPhoneInput){
+        console.log(customerFirstNameInput, customerLastNameInput, customerPhoneInput);
+    } else {
+        console.log(customerFirstNameInput, customerLastNameInput);
+    }
+        
+}
