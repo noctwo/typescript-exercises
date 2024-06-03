@@ -42,4 +42,7 @@ import './cleancode-uebungen/cleancode-uebungen'
 import './oop-I/oop-I'
 import './oop-I-Uebungen/oop-I-uebungen'
 import './oop-II-Uebungen/app'
+import './oop-II-Uebungen/app'
+import './oop-III/app'
+import './oop-III-Uebungen/app'
 // import garnicht nötig? Sonst lädt alles sofort in der Main Index.html
