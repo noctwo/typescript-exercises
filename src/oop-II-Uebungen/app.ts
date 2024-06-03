@@ -6,6 +6,7 @@ import Driver from "./Driver";
 import carType from "./carType";
 import IceCreamFlavor from "./IceCreamFlavors";
 import Customer from "./Customer";
+import ValidateEmail from "./Validator";
 
 let newAnimal = new Animal();
 newAnimal.species = "Elephant";
@@ -64,5 +65,11 @@ newCustomer.email = "ugglbugfg";
 newCustomer.zipCode = 0;
 
 console.log(newCustomer);
+
+let newCustomer1 = new Customer();
+newCustomer1.name = "Manfred";
+newCustomer1.email = ValidateEmail._email;
+
+console.log(newCustomer1);
 
 

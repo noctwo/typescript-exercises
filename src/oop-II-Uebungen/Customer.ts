@@ -24,7 +24,7 @@ class Customer{
             this._name = value;
         }
     }
-
+    
     set email(value:string){
         if(value.includes("@")){
             this._email = value;
@@ -32,6 +32,7 @@ class Customer{
             console.log("E-Mail must include '@'");
         }
     }
+
 
     set zipCode(value:number){
         let zipToString = value.toString();
