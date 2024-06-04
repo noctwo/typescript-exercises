@@ -46,4 +46,5 @@ import './oop-II-Uebungen/app'
 import './oop-III/app'
 import './oop-III-Uebungen/app'
 import './interfaces/frontend/order-pizza'
+import './interfaces-uebungen/app'
 // import garnicht nötig? Sonst lädt alles sofort in der Main Index.html
