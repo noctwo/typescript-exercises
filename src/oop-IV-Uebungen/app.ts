@@ -4,7 +4,7 @@ import { Car } from "./Car";
 import { ElectriCar } from "./Electric-Car";
 import { Running } from "./Running";
 import { Yoga } from "./Yoga";
-import { Beyonce, Beyonce } from "./Beyonce";
+import { Beyonce } from "./Beyonce";
 import { Freddie } from "./Freddie";
 import { Madonna } from "./Madonna";
 import { Michael } from "./Michael";
