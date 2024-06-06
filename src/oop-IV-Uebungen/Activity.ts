@@ -1,20 +1,20 @@
 class Activity {
     public name: string;
-    public dufficulty: number;
+    private _difficulty: number = 0;
 
     get difficulty():number{
-        return this.difficulty
+        return this._difficulty
     }
 
     set difficulty(level:number){
         if (level >= 1 && level <= 6){
-            this.difficulty = level;
+            this._difficulty = level;
         } else console.error("Difficulty Level must be between 1 and 6");
     }
 
-    constructor(name:string, difficulty:number){
+    constructor(name:string){
         this.name = name;
-        this.dufficulty = difficulty;
+        
     }
 
     executing(){
