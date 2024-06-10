@@ -49,4 +49,6 @@ import './interfaces/frontend/order-pizza'
 import './interfaces-uebungen/app'
 import './oop-IV/app'
 import './oop-IV-Uebungen/app'
+import './types-and-errros/casting'
+import './types-and-errors-uebungen/app'
 // import garnicht nötig? Sonst lädt alles sofort in der Main Index.html
