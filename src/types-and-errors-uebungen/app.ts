@@ -54,20 +54,23 @@ let Cocktail: Alcohol & Mixer = {
 
 console.log(Cocktail.name, Cocktail.percentage, Cocktail.type, Cocktail.carbonated);
 
-/*
+
+function greetUser(){
 try {
 
-    function greetUser(){
     let userName = window.prompt("Whats your Name?");
-    window.alert(`Hi ${userName}`);
+    if (userName === null || userName === ""){
+    throw new Error("name empty");
     }
-    greetUser();
+    window.alert(`Hi ${userName}`);
 } catch (error) {
     
     window.alert("Hi Visitor!");
     
 }
-*/
+}
+greetUser();
+
 
 let myLottoNumbers:number[] = [];
 
