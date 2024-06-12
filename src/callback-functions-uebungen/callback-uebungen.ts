@@ -123,6 +123,8 @@ function generateRndEmoji(){
         result = characters[randomIndex];
     }
 
+    let shorterResult = characters[Math.floor(Math.random() * characters.length)];
+    console.log(shorterResult);
     return result;
 }
 
