@@ -54,4 +54,5 @@ import './types-and-errors-uebungen/app'
 import './Bom/bom'
 import './Bom-Uebungen/bom-uebungen'
 import './callback-functions/callback'
+import './callback-functions-uebungen/callback-uebungen'
 // import garnicht nötig? Sonst lädt alles sofort in der Main Index.html
