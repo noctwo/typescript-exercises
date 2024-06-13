@@ -55,4 +55,6 @@ import './Bom/bom'
 import './Bom-Uebungen/bom-uebungen'
 import './callback-functions/callback'
 import './callback-functions-uebungen/callback-uebungen'
+import './Promises/promises'
+import './promises-uebungen/promises-uebungen'
 // import garnicht nötig? Sonst lädt alles sofort in der Main Index.html
