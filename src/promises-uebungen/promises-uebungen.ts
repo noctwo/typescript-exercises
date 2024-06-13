@@ -125,29 +125,29 @@ if (randomNumbersArray[0] < 100 &&
 })
 
 numberPromise
-.then((numbers) => {
-    console.log(numbers);
-    let addSeven = numbers.map((number) => number + 7)
+.then((randomNumbers) => {
+    console.log(randomNumbers);
+    let addSeven = randomNumbers.map((number) => number + 7)
     console.log(addSeven);
     return addSeven
 })
-.then((numbers) => {
-    let timesTwo = numbers.map((number) => number * 2)
+.then((randomNumbers) => {
+    let timesTwo = randomNumbers.map((number) => number * 2)
     console.log(timesTwo);
     return timesTwo
 })
-.then((numbers) => {
-    let minusOne = numbers.map((number) => number - 1)
+.then((randomNumbers) => {
+    let minusOne = randomNumbers.map((number) => number - 1)
     console.log(minusOne);
     return minusOne
 })
-.then((numbers) => {
-    let moduloTwo = numbers.map((number) => number % 2)
+.then((randomNumbers) => {
+    let moduloTwo = randomNumbers.map((number) => number % 2)
     console.log(moduloTwo);
     return moduloTwo
 })
-.then((numbers) => {
-    console.log(numbers)
+.then((randomNumbers) => {
+    console.log(randomNumbers)
 })
 .catch((errormessage) => {
     console.log(errormessage);
