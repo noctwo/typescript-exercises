@@ -109,7 +109,7 @@ exerciseThree
 
 
 
-let numberPromise = new Promise ((resolve, reject) => {
+let numberPromise = new Promise<number[]> ((resolve, reject) => {
     let randomNumbersArray:number[] = [
         Math.ceil(Math.random() * 130),
         Math.ceil(Math.random() * 130),
@@ -125,7 +125,7 @@ if (randomNumbersArray[0] < 100 &&
 })
 
 numberPromise
-.then((randomNumbers) => {
+.then((randomNumbers:number[]) => {
     console.log(randomNumbers);
     let addSeven = randomNumbers.map((number) => number + 7)
     console.log(addSeven);

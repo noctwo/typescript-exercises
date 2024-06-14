@@ -135,3 +135,15 @@ function updateHeadline(thisIsTheNewHeadline:() => {}){
 
 
 
+
+
+
+
+import { OrderProcessState } from "./OrderProcessState";
+
+function processOrder (customerName:string, customerOrderStatus: (customerName:string, orderProcessState:OrderProcessState) => number){
+    
+    customerOrderStatus(customerName, OrderProcessState);
+};
+
+processOrder("Hans", 1);
