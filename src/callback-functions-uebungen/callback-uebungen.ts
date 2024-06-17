@@ -139,11 +139,16 @@ function updateHeadline(thisIsTheNewHeadline:() => {}){
 
 
 
+
 import { OrderProcessState } from "./OrderProcessState";
 
-function processOrder (customerName:string, customerOrderStatus: (customerName:string, orderProcessState:OrderProcessState) => number){
-    
-    customerOrderStatus(customerName, OrderProcessState);
+
+function processOrder(
+    customerName:string,
+    customerOrderStatus: (customerName:string, orderState:OrderProcessState) => void)
+    {
+        customerOrderStatus(customerName, orderState);
+
 };
 
-processOrder("Hans", 1);
+processOrder("Hans", 2);
