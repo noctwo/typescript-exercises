@@ -1,0 +1,18 @@
+.rnd-gallery{
+    width: 80%;
+    margin: 0 auto;
+    background-color: lightgray;
+}
+
+#rnd-gallery-wrapper{
+
+    display:grid;
+    grid-template-columns: repeat(2/*auto-fit*/, minmax(200px, 1fr));
+    grid-template-rows: 300px 1fr;
+    gap: 2em;
+    grid-auto-rows: 300px;
+}
+
+#rnd-gallery-wrapper figure img{
+  max-width: 300px;
+}

@@ -58,4 +58,5 @@ import './callback-functions-uebungen/callback-uebungen'
 import './Promises/promises'
 import './promises-uebungen/promises-uebungen'
 import './api/fetch-posts'
+import './api-uebungen/api-uebungen'
 // import garnicht nötig? Sonst lädt alles sofort in der Main Index.html

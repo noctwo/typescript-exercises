@@ -1,0 +1,16 @@
+time: 550ms
+planets: 60
+secondToLastPlanet: Kalee
+hothClimate: frozen
+secondPlanetPageThree: Corellia
+
+firstPersonInPeople: Luke Skywalker
+lukeSkywalkerSpaceShips: X-Wing, Imperial Shuttle
+lastPersonHaircolor: auburn, white
+lastPersonEyecolor: blue-gray
+firstPersonPageThree: Boba Fett 
+bobaFettFilms: The Empire Strikes Back, Return of the Jedi, Attack of the Clones
+
+https://swapi.dev/api/people/?search=leia
+leiaHeight: 150
+leiaHomeWorld: Alderaan
