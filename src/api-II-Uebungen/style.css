@@ -1,0 +1,20 @@
+.wow-characters{
+    margin-bottom: 5em;
+}
+
+
+
+.single-todo{
+    background-color: beige;
+    width: 40%;
+    padding: 2em 3em;
+    border-radius: 16px;
+}
+
+.single-todo-done{
+    background-color: limegreen;
+}
+
+.single-todo-open{
+    background-color: orangered;
+}
