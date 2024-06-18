@@ -41,21 +41,21 @@ fetch ("https://jsonplaceholder.typicode.com/posts")
 })
 .then((allPosts) => {
     allPosts.sort((a:number, b:number) => b.id - a.id );
-    console.log(allPosts[0])
+    console.log(allPosts[0].id)
     let postsByNamelength = allPosts.slice();
     return postsByNamelength;
 })
 
 .then((postsByNamelength) => {
     postsByNamelength.sort((a, b) => (a.title).length - (b.title).length);
-    console.log(postsByNamelength[0]);
+    console.log(postsByNamelength[0].title);
     let postsByBodyLength = postsByNamelength.slice();
     return postsByBodyLength
 })
 
 .then((postsByBodyLength) => {
     postsByBodyLength.sort((a, b) => (b.body).length - (a.body).length);
-    console.log(postsByBodyLength[0]);
+    console.log(postsByBodyLength[0].body);
 })
 .catch((error: Error) => {
     console.error(error);
