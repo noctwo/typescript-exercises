@@ -2,7 +2,49 @@
     margin-bottom: 5em;
 }
 
+.backdrop{
+    border-radius: 16px;
+    width: 40%;
+    display: flex;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+.char-name{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    display: block;
+}
+.char-info p{
+    margin: 5px;
+    padding: 0;
+}
+
+.char-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.char-details{
+    display: flex;
+    gap: 1em;
+}
+
+.backdrop-horde{
+    background-color: darkred;
+}
+
+.backdrop-alliance{
+    background-color: royalblue;
+}
+
+.char-portrait img{
+    border-radius: 16px;
+    width: 155px;
+    margin-right: 2em;
+}
 
 .single-todo{
     background-color: beige;

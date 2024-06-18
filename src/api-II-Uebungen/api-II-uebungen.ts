@@ -2,6 +2,7 @@ let searchForm = document.getElementById("search-input") as HTMLFormElement;
 let regionInput = document.getElementById("region-input") as HTMLInputElement;
 let realmInput = document.getElementById("realm-input") as HTMLInputElement;
 let characterNameInput = document.getElementById("name-input") as HTMLInputElement;
+let outputArea = document.getElementById("character-output-wrapper") as HTMLElement;
 
 searchForm.addEventListener("submit", (event => {
     event.preventDefault()
@@ -33,10 +34,47 @@ fetch(fetchURL)
     if(!response.ok){
         throw Error(`${response.status}, ${response.statusText}`)
     }
-    console.log(response.json());
+    return response.json();
+})
+.then((data) => {
+
+        if (data.faction === "horde") {
+            outputArea.innerHTML = `
+            <div class="backdrop backdrop-horde">
+            <div class="char-portrait">
+                <img src="${data.thumbnail_url}">
+            </div>
+            <div class="char-info">
+            <p class="char-name">${data.name}</p>
+            <div class="char-details">
+            <p class="char-race">${data.race}</p>
+            <p class="char-class">${data.class}</p>
+            <p class="char-faction">${data.faction}</p>
+            </div>
+            </div>
+            </div>
+            `
+        } else{
+            outputArea.innerHTML = `
+            <div class="backdrop backdrop-alliance">
+            <div class="char-portrait">
+                <img src="${data.thumbnail_url}">
+            </div>
+            <div class="char-info">
+            <p class="char-name">${data.name}</p>
+            <div class="char-details">
+            <p class="char-race">${data.race}</p>
+            <p class="char-class">${data.class}</p>
+            <p class="char-faction">${data.faction}</p>
+            </div>
+            </div>
+            </div>
+            `
+        }
+    
 })
 
-}
+};
 
 
 
