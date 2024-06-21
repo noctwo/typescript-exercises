@@ -63,4 +63,5 @@ import './api-II/harry-potter'
 import './api-II-Uebungen/api-II-uebungen'
 import './api-III/countries'
 import './api-IV-recap/planets'
+import './api-IV-Rick&Morty/rickandmorty'
 // import garnicht nötig? Sonst lädt alles sofort in der Main Index.html
