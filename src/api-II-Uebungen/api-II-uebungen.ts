@@ -36,6 +36,7 @@ fetch(fetchURL)
     }
     return response.json();
 })
+
 .then((data) => {
 
         if (data.faction === "horde") {
@@ -77,6 +78,24 @@ fetch(fetchURL)
 };
 
 
+/*
+function buildCard(data){
+    outputArea.innerHTML = `
+            <div class="char-portrait">
+                <img src="${data.thumbnail_url}">
+            </div>
+            <div class="char-info">
+            <p class="char-name">${data.name}</p>
+            <div class="char-details">
+            <p class="char-race">${data.race}</p>
+            <p class="char-class">${data.class}</p>
+            <p class="char-faction">${data.faction}</p>
+            </div>
+            </div>
+            </div>
+            `
+}
+*/
 
 
 import { ITodo } from "./contracts/ITodo";
