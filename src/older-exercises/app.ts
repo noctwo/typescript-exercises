@@ -98,3 +98,22 @@ function getNumberOfVowels(inputString:string){
 getNumberOfVowels("abracadabrasimsalabimbambazeladu");
 
 
+
+let loopNumberInput = document.getElementById("loop-number-input") as HTMLInputElement;
+let loopBtn = document.getElementById("loop-output-btn") as HTMLButtonElement;
+let loopOutput = document.getElementById("loop-output") as HTMLElement;
+
+
+loopBtn.addEventListener("click", () => {
+    let loopNumberInputValue = Number(loopNumberInput.value);
+    createLoopOutput(loopNumberInputValue);
+})
+
+function createLoopOutput(numberOfOOOOOOOOOOOs:number){
+    let numberOfOsArray = [];
+    for (let index = 0; index <= numberOfOOOOOOOOOOOs; index++) {
+        numberOfOsArray.push("o");
+    }
+    let allOs = numberOfOsArray.join("");
+    loopOutput.innerHTML = `L${allOs}p`;
+}
