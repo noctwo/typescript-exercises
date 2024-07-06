@@ -52,7 +52,6 @@ function getMaxTemp(){
     let max = `Höchste Temperatur: ${Math.max(...maxTemps)} °C`;
     console.log(max);
 }
-
 getMinTemp();
 getMaxTemp();
 
@@ -72,7 +71,30 @@ function calculateFactorial(number:number){
 }
     }
 }
-
 calculateFactorial(3)
 calculateFactorial(5)
 calculateFactorial(10)
+
+function addToFifty(){
+    let isFifty = 0;
+    for (let index = 0; isFifty <= 50; index++) {
+        let addUp = Math.floor(Math.random()*10);
+        console.log(addUp);
+        isFifty = isFifty + addUp;
+    }
+    console.log(`result: ${isFifty}`);
+}
+addToFifty();
+
+
+
+
+function getNumberOfVowels(inputString:string){
+    let foundVowels:string[] | null = [];
+    let vowels:any = inputString.match(/[aeiou]/ig);
+    foundVowels.push(vowels);
+    console.log(foundVowels);
+}
+getNumberOfVowels("abracadabrasimsalabimbambazeladu");
+
+
