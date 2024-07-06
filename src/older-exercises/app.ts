@@ -117,3 +117,56 @@ function createLoopOutput(numberOfOOOOOOOOOOOs:number){
     let allOs = numberOfOsArray.join("");
     loopOutput.innerHTML = `L${allOs}p`;
 }
+
+
+
+
+
+let artworks:string [] = [    
+    "Die Sternennacht - Vincent van Gogh",
+    "Guernica - Pablo Picasso",
+    "Die Geburt der Venus - Sandro Botticelli",
+    "Die Nachtwache - Rembrandt",
+    "Die Mona Lisa - Leonardo da Vinci",
+    "Die Kartoffelesser - Vincent van Gogh",
+    "Der Schrei - Edvard Munch",
+    "Das letzte Abendmahl - Leonardo da Vinci",
+    "Die freudige Botschaft - James Tissot",
+    "Der Garten der Lüste - Hieronymus Bosch"
+];
+
+let artworkDates:string[] = [
+    "Die Sternennacht - 1889",
+    "Guernica - 1937",
+    "Die Geburt der Venus - 1486",
+    "Die Nachtwache - 1642",
+    "Die Mona Lisa - 1503",
+    "Die Kartoffelesser - 1885",
+    "Der Schrei - 1893",
+    "Das letzte Abendmahl - 1495",
+    "Die freudige Botschaft - 1885",
+    "Der Garten der Lüste - 1505"
+];
+
+
+function searchAndSplitArtworksAndDates (searchTerm:string){
+    let findString = artworks.find((findParam) => findParam.startsWith(searchTerm))?.split("-");
+    let findYear = artworkDates.find((findParam) => findParam.startsWith(searchTerm))?.split("-");
+
+    console.log(`${findString![0]} wurde von ${findString![1]} im Jahre ${findYear![1]} gemalt.`);
+    return findString && findYear;
+};
+
+searchAndSplitArtworksAndDates("Guernica");
+searchAndSplitArtworksAndDates("Die Sternennacht");
+searchAndSplitArtworksAndDates("Der Schrei");
+searchAndSplitArtworksAndDates("Die Mona Lisa");
+searchAndSplitArtworksAndDates("Die Kartoffelesser");
+searchAndSplitArtworksAndDates("Das letzte Abendmahl");
+searchAndSplitArtworksAndDates("Die freudige Botschaft");
+searchAndSplitArtworksAndDates("Der Garten der Lüste");
+searchAndSplitArtworksAndDates("Die Nachtwache");
+searchAndSplitArtworksAndDates("Die Geburt der Venus");
+
+
+
