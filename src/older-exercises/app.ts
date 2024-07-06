@@ -1,5 +1,6 @@
 import { SingerThree } from "./SingerThreeType";
 import { singersThree } from "./singersThree";
+import { weather } from "./weather";
 
 let searchInput = document.getElementById("search-input") as HTMLInputElement;
 let tableOutput = document.getElementById("table-container") as HTMLElement;
@@ -35,3 +36,22 @@ function searchSingers(searchTerm:string){
         printAllSingersTable(element);
     });
 }
+
+
+let weatherData = [...weather.data]
+console.log(weatherData);
+
+function getMinTemp(){
+    let minTemps = weatherData.map((data) => data.temperature_min);
+    let min = `Niedrigste Temperatur: ${Math.min(...minTemps)} °C`;
+    console.log(min);
+}
+
+function getMaxTemp(){
+    let maxTemps = weatherData.map((data) => data.temperature_max);
+    let max = `Höchste Temperatur: ${Math.max(...maxTemps)} °C`;
+    console.log(max);
+}
+
+getMinTemp();
+getMaxTemp();
