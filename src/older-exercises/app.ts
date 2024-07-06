@@ -55,3 +55,24 @@ function getMaxTemp(){
 
 getMinTemp();
 getMaxTemp();
+
+
+console.log(`Current URL is: ${window.location.href}`)
+
+function calculateFactorial(number:number){
+    
+    if (number === 0 || number === 1){
+        console.log(`factorial(${number}) = ${Number(1)}`);
+    } 
+    else{
+        let result= 1;
+        for (let index = 1; index <= number; index++) {
+        result = result * index
+        console.log(result);
+}
+    }
+}
+
+calculateFactorial(3)
+calculateFactorial(5)
+calculateFactorial(10)

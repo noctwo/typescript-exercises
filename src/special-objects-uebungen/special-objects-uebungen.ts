@@ -166,7 +166,7 @@ console.log(favoriteBands);
 favoriteBands.set("The Beatles", ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"])
 console.log(favoriteBands);
 console.log(favoriteBands.get("Metallica"));
-console.log(favoriteBands.get("Metallica")[3]);
+console.log(favoriteBands.get("Metallica")![3]);
 
 
 // Enum um ein anderes Enum erweitern
