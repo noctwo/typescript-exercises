@@ -170,3 +170,66 @@ searchAndSplitArtworksAndDates("Die Geburt der Venus");
 
 
 
+
+let scoreHome = document.getElementById("score-home") as HTMLElement;
+let scoreAway = document.getElementById("score-away") as HTMLElement;
+
+let addOneHome = document.getElementById("add-one-home") as HTMLButtonElement;
+let addTwoHome = document.getElementById("add-two-home") as HTMLButtonElement;
+let addThreeHome = document.getElementById("add-three-home") as HTMLButtonElement;
+
+let addOneAway = document.getElementById("add-one-away") as HTMLButtonElement;
+let addTwoAway = document.getElementById("add-two-away") as HTMLButtonElement;
+let addThreeAway = document.getElementById("add-three-away") as HTMLButtonElement;
+
+let resetBtn = document.getElementById("reset-score-btn") as HTMLButtonElement;
+
+let changeHomeTeamNameBtn = document.getElementById("home-team-name-btn") as HTMLButtonElement;
+let changeAwayTeamNameBtn = document.getElementById("away-team-name-btn") as HTMLButtonElement;
+
+let homeTeamNameOutput = document.getElementById("home-team-name-output") as HTMLElement;
+let awayTeamNameOutput = document.getElementById("away-team-name-output") as HTMLElement;
+
+function addToHomeScore(add:number){
+    let currentScoreHome = Number(scoreHome.innerText);
+    let newScoreHome = currentScoreHome + add;
+    scoreHome.innerHTML = newScoreHome.toString();
+}
+
+function addToAwayScore(add:number){
+    let currentScoreAway = Number(scoreAway.innerText);
+    let newScoreAway = currentScoreAway + add;
+    scoreAway.innerHTML = newScoreAway.toString();
+}
+
+let addScoreButtonsHome = [addOneHome, addTwoHome, addThreeHome];
+let addScoreButtonsAway = [addOneAway, addTwoAway, addThreeAway]
+
+addScoreButtonsHome.forEach(button => {
+    button.addEventListener("click", () =>{
+        addToHomeScore(Number(button.value))
+    })
+});
+
+addScoreButtonsAway.forEach(button => {
+    button.addEventListener("click", () =>{
+        addToAwayScore(Number(button.value))
+    })
+});
+
+resetBtn.addEventListener("click", () => {
+    scoreHome.innerHTML = "0";
+    scoreAway.innerHTML = "0";
+    homeTeamNameOutput.innerHTML = "Home Team";
+    awayTeamNameOutput.innerHTML = "Away Team"
+})
+
+changeHomeTeamNameBtn.addEventListener("click", () => {
+    let homeTeamNameUserInput = window.prompt("Home Team Name");
+    homeTeamNameOutput.innerText = homeTeamNameUserInput!;
+})
+
+changeAwayTeamNameBtn.addEventListener("click", () => {
+    let awayTeamNameUserInput = window.prompt("Home Team Name");
+    awayTeamNameOutput.innerText = awayTeamNameUserInput!;
+})
